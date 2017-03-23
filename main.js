@@ -9,11 +9,13 @@ var main = function () {
     $('.squareDiv').css({
         'height': cw + 'px'
     });
-    
+
     var cw = $('.square').width();
     $('.square').css({
         'height': cw + 'px'
     });
+
+
 
     //making rectDiv rectangular
     //var cw = $('.rectDiv').width()*2;
@@ -47,7 +49,8 @@ var main = function () {
 
         } else if (top < changePoint) {
             $('.topnav').removeClass('changeStyle');
-          $(".whiteLogo").removeClass('logo');  $('.hamburger').removeClass('hChangeStyle');
+            $(".whiteLogo").removeClass('logo');
+            $('.hamburger').removeClass('hChangeStyle');
             //document.getElementById('logo').src = 'img/logo-big.svg'
         }
 
@@ -87,12 +90,11 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-//modal script
 var vtitle = [
             "Tree Planting"
         ]
 var vtext = [
-            "Enjoy a whole day in the great Canadian outdoors. This is a great opportunity to not only learn about the environment, but truly appreciate it. Breath in the lush earthy air of the forest and get your hands dirty planting some saplings!",
+            "Enjoy a whole day in the great Canadian outdoors. This is a great opportunity to not only learn about the environment, but truly appreciate it. Breath in the lush earthy air of the forest and get your hands dirty planting some saplings!"
         ]
 var vhref = [
             "mailto:tempEmail?Subject=Event Title &body=Full Name:"
@@ -110,6 +112,7 @@ function moreInfo(num) {
 function closeBar() {
     document.getElementById("mySidebar").style.width = "0";
 }
+
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
@@ -117,30 +120,17 @@ function closeNav() {
 
 
 // When the user clicks the button, open the modal 
-function openModal() {
-    document.getElementById('myModal').style.display = "block";
+function openModal(head, description, paragraph, pic) {
+    $('#mhead').text(head);
+    $('#mdescription').text(description);
+    $('#mtext').text(paragraph);
+    document.getElementById("mImg").style.backgroundImage = pic;
+
+    var cw = $('.modal-content').width();
+    $("#myModal").fadeToggle(500);
 }
 
 // When the user clicks on <span> (x), close the modal
 function closeModal() {
-    document.getElementById('myModal').style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-
-
-
-
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        $("#myModal").fadeToggle(500);
-    }
+    $("#myModal").fadeToggle(500);
 }

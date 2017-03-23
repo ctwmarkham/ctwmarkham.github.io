@@ -72,16 +72,15 @@
     <div class="space"></div>
     <div class="space"></div>
     <div class="space"></div>
-    
-    <a onclick="openModal()">click</a>
 
     <section class="withDoubleMargins" id="profiles">
+        <h1>Our Team</h1>
         <div class="row">
             <div class="col-sm-4">
-                <div class="square" id="a" style="background-image: url('Img/1.jpg'); background-size:cover">
+                <div class="square" id="a" style="background-image: url('Img/profiles/bobby.jpg'); background-size:cover">
                 </div>
                 <div class="name" id="aa">
-                    <h2 class="white">Bobby Wong</h2>
+                    <h2 class="white" onclick="openModal('Bobby Wong','description', 'body','url(Img/profiles/bobby.jpg)')">Bobby Wong</h2>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -193,14 +192,14 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-        <div class="modal-header">
+        <div id = "mImg" class="modal-header">
             <span id = "close" class="close" onclick="closeModal()">&times;</span>
-            <h1>Modal Header</h1>
         </div>
         <div class="modal-body">
-            <img style="width:20%"src="Img/2.svg">
-            <p>
-                fjdsafkljadsklfjdlskafjldskjfkldsjf kldsjfkjdsklf dksjf djsfk ldsjfkl sdjlfk jsdlkfj sdlkjfklds jflksdj flkdsjflkjilrueijf dskjf dsklj flkds f
+            <h1 id="mhead">Modal Header</h1>
+            <h4 id = "mdescription">disc</h4>
+            <p id = "mtext">
+               Some text here.
             <p>
         </div>
         <!--<div class="modal-footer">

@@ -100,7 +100,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url(img/jumbo.jpg);
+    background-image: url(Img/jumbo.jpg);
     background-size: cover;
     background-position: center;
     text-align: right;
@@ -437,47 +437,42 @@ footer {
 .letterBody {
     text-shadow: 1px 1px #DEDEDE;
 }
-.name{
+.name {
     position: absolute;
     bottom: 0;
     left: 0;
-    visibility:hidden;
+    visibility: hidden;
     transition: all 0.25 ease;
 }
-.square{
+.square {
     margin-top: 30px;
+    background-position: right;
 }
-#a:hover + #aa{
+#a:hover + #aa {
     transition: all 0.25 ease;
     visibility: visible;
 }
-.name:hover{
+.name:hover {
     visibility: visible;
+    cursor: pointer;
 }
+
 /* The Modal (background) */
 
 .modal {
-    display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
-    z-index: 199;
-    /* Sit on top */
-    padding-top: 150px;
-    /* Location of the box */
-    padding-left: 100px;
-    padding-right: 100px;
-    left: 0;
     top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
     /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(25, 206, 196, .75)/* Black w/ opacity */
+    background-color: rgba(22, 197, 132, .75)/* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -486,8 +481,10 @@ div.modal-content {
     position: relative;
     background-color: white;
     margin: auto;
+    margin-top: 50px;
     padding: 0;
-    width: 90%;
+    width: 600px;
+    height: 600px;
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
     -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
     -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
@@ -496,7 +493,11 @@ div.modal-content {
     border: none !important;
 }
 .modal-header {
+    height: 350px;
     padding: 2px 16px;
+    background-image: url(Img/profiles/bobby.jpg);
+    background-position: center;
+    background-size: cover;
 }
 .modal-body {
     font-size: 1em;
@@ -515,7 +516,6 @@ div.modal-content {
     text-decoration: none;
     cursor: pointer;
 }
-
 @media screen and (max-width: 1200px) {
     .withMainMargins {
         margin-left: 150px;
@@ -610,6 +610,14 @@ div.modal-content {
     .svgMargin {
         margin: 75px;
     }
+    div.modal-content {
+        position: relative;
+        background-color: white;
+        margin: auto;
+        margin-top: 15px;
+        padding: 0;
+        width: 90%;
+    }
 }
 @media screen and (max-width: 320px) {
     .withMainMargins {
@@ -638,5 +646,13 @@ div.modal-content {
     }
     .jumbotron h2 {
         font-size: 250% !important;
+    }
+}
+@media screen and (max-height: 600px) {
+    .modal-content{
+        height: 500px !important;
+    }
+    .modal-header {
+        height: 200px;
     }
 }
