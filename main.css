@@ -25,6 +25,7 @@ p {
     padding-top: 20px;
     font-family: "Poppins", sans-serif;
     color: #768B95;
+    line-height: 150%;
 }
 .whiteLogo {
     height: 50px;
@@ -441,8 +442,11 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    visibility: hidden;
+    /*visibility: hidden;*/
     transition: all 0.25 ease;
+}
+.names{
+    font-size: 30px !important;
 }
 .square {
     margin-top: 30px;
@@ -493,16 +497,20 @@ div.modal-content {
     border: none !important;
 }
 .modal-header {
-    height: 350px;
+    height: 280px;
     padding: 2px 16px;
     background-image: url(Img/profiles/bobby.jpg);
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 .modal-body {
     font-size: 1em;
     padding: 2px 16px;
     overflow: auto;
+}
+#mtext{
+    overflow: scroll;
+    height: 180px;
 }
 .exit {
     color: #FACD00;
@@ -610,6 +618,9 @@ div.modal-content {
     .svgMargin {
         margin: 75px;
     }
+    .letter{
+        padding: 20px;
+    }
     div.modal-content {
         position: relative;
         background-color: white;
@@ -646,6 +657,9 @@ div.modal-content {
     }
     .jumbotron h2 {
         font-size: 250% !important;
+    }
+    .modal-content{
+        height: 650px !important;
     }
 }
 @media screen and (max-height: 600px) {
