@@ -90,22 +90,12 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-var vtitle = [
-            "Tree Planting"
-        ]
-var vtext = [
-            "Enjoy a whole day in the great Canadian outdoors. This is a great opportunity to not only learn about the environment, but truly appreciate it. Breath in the lush earthy air of the forest and get your hands dirty planting some saplings!"
-        ]
-var vhref = [
-            "mailto:tempEmail?Subject=Event Title &body=Full Name:"
-        ]
-var modal = document.getElementById("mySideBar");
 
-function moreInfo(num) {
-    $("#mTitle").text(vtitle[num]);
-    $("#mText").text(vtext[num]);
+function moreInfo(title, text, href) {
+    $("#mTitle").text(title);
+    $("#mText").text(text);
     document.getElementById("mySidebar").style.width = "300px";
-    document.getElementById("sendRequest").setAttribute("href", vhref[num]);
+    document.getElementById("sendRequest").setAttribute("href", href);
     // modal.style.display = "block";
 }
 

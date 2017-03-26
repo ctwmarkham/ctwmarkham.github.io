@@ -452,10 +452,7 @@ footer {
     margin-top: 30px;
     background-position: right;
 }
-#a:hover + #aa {
-    transition: all 0.25 ease;
-    visibility: visible;
-}
+
 .name:hover {
     visibility: visible;
     cursor: pointer;
