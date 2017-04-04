@@ -1,6 +1,7 @@
 html,
 body {
     overflow-x: hidden;
+    
 }
 h1 {
     font-family: "Helvetica", sans-serif;
@@ -20,12 +21,17 @@ h4 {
     font-family: "Poppins", sans-serif !important;
     font-weight: 400 !important;
     font-size: 20px !important;
+    line-height: 150% !important;
 }
 p {
     padding-top: 20px;
     font-family: "Poppins", sans-serif;
     color: #768B95;
-    line-height: 150%;
+    line-height: 150% !important;
+}
+
+a:hover{
+    cursor: pointer;
 }
 .whiteLogo {
     height: 50px;
@@ -445,14 +451,13 @@ footer {
     /*visibility: hidden;*/
     transition: all 0.25 ease;
 }
-.names{
+.names {
     font-size: 30px !important;
 }
 .square {
     margin-top: 30px;
     background-position: right;
 }
-
 .name:hover {
     visibility: visible;
     cursor: pointer;
@@ -505,7 +510,7 @@ div.modal-content {
     padding: 2px 16px;
     overflow: auto;
 }
-#mtext{
+#mtext {
     overflow: scroll;
     height: 180px;
 }
@@ -521,6 +526,89 @@ div.modal-content {
     text-decoration: none;
     cursor: pointer;
 }
+.contactP {
+    padding-top: 0px;
+}
+
+/*----- Accordion -----*/
+
+.accordion,
+.accordion * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.accordion {
+    overflow: hidden;
+}
+
+/*----- Section Titles -----*/
+
+.accordion-section-title {
+    margin-top: 20px;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #1a1a1a;
+    background: white;
+    transition: all linear 0.15s;
+    /* Type */
+    text-decoration: none;
+    color: #294053;
+    font-family: "Helvetica", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    line-height: 150% !important;
+}
+.accordion-section-title.active {
+    /* Type */
+    text-decoration: none;
+    color: #16C584;
+    text-shadow: none;
+}
+.accordion-section-title:hover {
+    /* Type */
+    text-decoration: none;
+    color: #C7D0D4;
+    text-shadow: none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+/*----- Section Content -----*/
+
+.accordion-section-content {
+    padding: 15px;
+    display: none;
+}
+
+input{
+    width: 100%;
+    
+    padding: 12px 20px;
+    border-color: #16C584;
+    box-shadow: none;
+    border-style: solid;
+    border-width: thin;
+    outline: none;
+}
+textArea{
+    margin-top: 15px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        resize: none;
+        border-color: #16C584;
+}
+textArea:focus{
+    outline:none;
+}
+
+
 @media screen and (max-width: 1200px) {
     .withMainMargins {
         margin-left: 150px;
@@ -615,7 +703,7 @@ div.modal-content {
     .svgMargin {
         margin: 75px;
     }
-    .letter{
+    .letter {
         padding: 20px;
     }
     div.modal-content {
@@ -655,12 +743,12 @@ div.modal-content {
     .jumbotron h2 {
         font-size: 250% !important;
     }
-    .modal-content{
+    .modal-content {
         height: 650px !important;
     }
 }
 @media screen and (max-height: 600px) {
-    .modal-content{
+    .modal-content {
         height: 500px !important;
     }
     .modal-header {
